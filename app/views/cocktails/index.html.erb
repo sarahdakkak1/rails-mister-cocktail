@@ -1,0 +1,24 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/05/22/13/gin-cocktails.jpg);">
+  <div class="container">
+    <h1>Fancy <strong>cocktails</strong></h1>
+    <a class="btn btn-flat" href="#">Search</a>
+  </div>
+</div>
+
+
+<div class="container">
+<div class="row">
+<% @cocktails.each do |cocktail| %>
+<div class="card" class="col-sm" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+
+ <p class="card-text"><%= cocktail.name %></p>
+  <p class="card-text"><%= link_to "show", cocktail_path(cocktail), class: 'card-link' %></p>
+    <br>
+
+  </div>
+</div>
+<% end %>
+</div>
+</div>

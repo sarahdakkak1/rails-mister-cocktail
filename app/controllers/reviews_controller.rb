@@ -8,6 +8,7 @@ class ReviewsController < ApplicationController
     else
       render "cocktails/show"
     end
+  end
 
   private
 

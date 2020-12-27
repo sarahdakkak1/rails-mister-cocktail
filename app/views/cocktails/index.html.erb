@@ -1,16 +1,14 @@
-<h1>Le Wagon's cocktails</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/drllepyzu/image/upload/v1609028908/cocktails_see4vx.jpg);">
+    <h1>Fancy cocktails</h1>
+    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary btn-lg" %>
+  </div>
+</div>
 
 <div class="container">
-  <div class="row">
-    <% @cocktails.each do |cocktail| %>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?cocktail');">
-          <div class="card-description">
-            <h2><%= cocktail.name %></h2>
-          </div>
-          <%= link_to "show", cocktail_path(cocktail), class: 'card-link' %>
-        </div>
-      </div>
-    <% end %>
-  </div>
+  <% @cocktails.each do |cocktail|%>
+    <div class="card-category"
+      style="background-image: url('<%= cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
+      <%= link_to cocktail.name.capitalize, cocktail_path(cocktail), class: "text-white text-decoration-none" %>
+    </div>
+  <% end %>
 </div>

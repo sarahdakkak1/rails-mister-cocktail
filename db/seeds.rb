@@ -9,8 +9,3 @@ Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
 
-Cocktail.create(name: "Walk of Shame")
-Cocktail.create(name: "Cuba Libre")
-Cocktail.create(name: "Beer")
-Cocktail.create(name: "Le Wagon on The beach")
-Cocktail.create(name: "Margarita")
